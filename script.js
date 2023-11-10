@@ -27,8 +27,8 @@ function encriptar(){
     
     document.getElementById("textoDesencriptado").value = textoEncriptado;
 
-  //Limpiar el campo de entrada
-  document.getElementById("textoEncriptado").value = "";
+  // Limpiar las advertencias después de encriptar
+  resetearMensajes();
 }
 
 //Copiar el texto encriptado
@@ -64,9 +64,9 @@ function desencriptarTexto(texto){
 
     texto = texto.toLowerCase();
 
-    // Aplicar la sustitución utilizando replace
+    // Aplicar la letra original utilizando replace
     const textoDesencriptado = texto.replace(/(ober|enter|imer|ai|ufat)/g, function(palabra) {
-      // Si el carácter está en el mapa de sustituciones, lo reemplazamos; de lo contrario, lo dejamos igual
+      // Si la palabra está en el mapa de originales, se reemplaza
         return originales[palabra] || palabra;
     });
 
@@ -79,8 +79,8 @@ function desencriptar(){
   
   document.getElementById("textoDesencriptado").value = textoOriginal;
 
-  //Limpiar el campo de entrada
-  document.getElementById("textoEncriptado").value = "";
+  // Limpiar las advertencias después de encriptar
+  resetearMensajes();
 }
 
 function limpiarTodo(){
@@ -92,3 +92,44 @@ function limpiarTodo(){
 }
 
 document.getElementById("botonLimpiar").addEventListener("click", limpiarTodo);
+
+//Validación de entrada
+const input = document.getElementById("textoEncriptado");
+
+//Mensajes para notificarle al usuario las advertencias
+const advertenciaTexto = document.getElementById("advertenciaTexto");
+const sugerenciaTexto = document.getElementById("sugerenciaTexto");
+
+document.getElementById("botonEncriptado").addEventListener("click", function () {
+
+  if (input.value.length === 0){
+    mostrarAdvertencia(advertenciaTexto, "Ningún mensaje fue encontrado");
+    mostrarSugerencia(sugerenciaTexto, "Ingresa el texto que desees encriptar.");
+  }
+  else{
+    resetearMensajes();
+  }
+});
+
+  document.getElementById("botonDesencriptado").addEventListener("click", function () {
+    if (input.value.length === 0){
+      mostrarAdvertencia(advertenciaTexto, "Ningún mensaje fue encontrado");
+      mostrarSugerencia(sugerenciaTexto, "Ingresa el texto que desees desencriptar.");
+    }
+    else{
+      resetearMensajes();
+    }
+  });
+
+function resetearMensajes() {
+  advertenciaTexto.innerHTML = "";
+  sugerenciaTexto.innerHTML = "";
+}
+
+function mostrarAdvertencia(elemento, mensaje) {
+  elemento.innerHTML = mensaje;
+}
+
+function mostrarSugerencia(elemento, mensaje) {
+  elemento.innerHTML = mensaje;
+}

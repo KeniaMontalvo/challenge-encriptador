@@ -3,18 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Encriptador de texto</title>
 </head>
 <body>
-    <input type="text" id="textoEncriptado">
-    <textarea name="resultado" id="textoDesencriptado" cols="30" rows="10"></textarea>
+    <nav>
+        <img src="" alt="">
+    </nav>
+    <div class="cuerpo">
+        <section class="ingresarTexto">
 
-    <button type="button" id="botonEncriptado" onclick="encriptar()">Encriptar</button>
-
-    <button type="button" id="botonDesencriptado" onclick="desencriptar()">Desencriptar</button>
+            <form action="" id="form">
+                <div class="textoParaModificar">
+                    <label for="textoEncriptado">Ingrese el texto aquí</label>
+                    <input type="text" id="textoEncriptado" name="textoEncriptado">
+                </div>
     
-    <button type="button" id="botonCopiar">Copiar</button>
-    <button type="button" id="botonLimpiar">Limpiar</button>
+                <div class="botonesPrincipales">
+                    <button type="button" id="botonEncriptado" onclick="encriptar()">Encriptar</button>
+        
+                    <button type="button" id="botonDesencriptado" onclick="desencriptar()">Desencriptar</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="textoIngresado">
+
+            <div class="textoModificado">
+                <textarea name="resultado" id="textoDesencriptado" cols="30" rows="10"></textarea>
+                <p class="advertencia" id="advertenciaTexto"></p>
+                <p class="sugerencia" id="sugerenciaTexto"></p>
+            </div>
+
+            <div class="botonesSecundarios">
+                <button type="button" id="botonCopiar">Copiar</button>
+                <button type="button" id="botonLimpiar">Limpiar</button>
+            </div>
+        </section>
+
+    </div>
 
     <script src="./script.js"></script>
 </body>

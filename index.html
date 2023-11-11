@@ -15,14 +15,15 @@
 
             <form action="" id="form">
                 <div class="textoParaModificar">
-                    <label for="textoEncriptado">Ingrese el texto aquí</label>
-                    <input type="text" id="textoEncriptado" name="textoEncriptado">
+                    <label for="textoEncriptado" class="etiquetaIndicacion">Ingrese el texto aquí</label>
+                    <textarea id="textoEncriptado" name="textoEncriptado" cols="30" rows="10" class="inputTextoParaEncriptar" spellcheck="false"></textarea>
                 </div>
     
                 <div class="botonesPrincipales">
-                    <button type="button" id="botonEncriptado" onclick="encriptar()">Encriptar</button>
+                    <button type="button" id="botonEncriptado" onclick="encriptar()" class="btn-encriptar">Encriptar</button>
         
-                    <button type="button" id="botonDesencriptado" onclick="desencriptar()">Desencriptar</button>
+                    <button type="button" id="botonDesencriptado" onclick="desencriptar()"
+                    class="btn-desencriptar">Desencriptar</button>
                 </div>
             </form>
         </section>
@@ -30,14 +31,14 @@
         <section class="textoIngresado">
 
             <div class="textoModificado">
-                <textarea name="resultado" id="textoDesencriptado" cols="30" rows="10"></textarea>
+                <textarea name="resultado" id="textoDesencriptado" cols="30" rows="10" class="inputTextoParaDesencriptar" spellcheck="false"></textarea>
                 <p class="advertencia" id="advertenciaTexto"></p>
                 <p class="sugerencia" id="sugerenciaTexto"></p>
             </div>
 
             <div class="botonesSecundarios">
-                <button type="button" id="botonCopiar">Copiar</button>
-                <button type="button" id="botonLimpiar">Limpiar</button>
+                <button type="button" id="botonCopiar" class="btn-copiar">Copiar</button>
+                <button type="button" id="botonLimpiar" class="btn-limpiar">Limpiar</button>
             </div>
         </section>
 

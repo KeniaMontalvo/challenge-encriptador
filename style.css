@@ -1,12 +1,17 @@
 body{
     background-color: #f3f5fc;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+/*Ambos contenedores*/
 
 div.cuerpo{
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-end;
 }
+
+/*Contenedor para ingresar texto*/
 
 section.ingresarTexto{
     display: flex;
@@ -18,7 +23,150 @@ div.textoParaModificar{
     flex-direction: column;
 }
 
+label.etiquetaIndicacion{
+    font-size: 25px;
+    color: #0a3871;
+}
+
+textarea.inputTextoParaEncriptar{
+    width: 30rem;
+    height: 25rem;
+    margin: 10px 0;
+    color: #0a3871;
+    outline: none;
+    border: 1px solid #f3f5fc;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 1px 2px 4px gray;
+    font-size: 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Botones*/
+
+div.botonesPrincipales{
+    display: flex;
+    justify-content: center;
+}
+
+div.botonesPrincipales button{
+    width: 13rem;
+    height: 3rem;
+    border-radius: 10px;
+    margin: 10px 5px;
+    border: 1px solid #0a3871;
+}
+
+button.btn-encriptar{
+    background-color: #0a3871;
+    color: white;
+    cursor: pointer;
+}
+
+button.btn-encriptar:hover{
+    background-color: #135ebb;
+    border: 1px solid #135ebb;
+}
+
+button.btn-desencriptar{
+    color: #0a3871;
+    background-color: #d8dfe8;
+    cursor: pointer;
+}
+
+button.btn-desencriptar:hover{
+    color: white;
+    background-color: #999ca0;
+    border: 1px solid #999ca0;
+    cursor: pointer;
+}
+
+/*Sección para mostrar el texto ingresado*/
+
 section.textoIngresado{
     display: flex;
     flex-direction: column;
+}
+
+div.textoModificado{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+p.advertencia{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+p.sugerencia{
+    font-size: 15px;
+    margin: 5px 0;
+}
+
+div.textoModificado textarea{
+    width: 20rem;
+    height: 18rem;
+    margin: 10px 0;
+    color: #0a3871;
+    outline: none;
+    border: 1px solid #f3f5fc;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 1px 2px 4px gray;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Botones secundarios*/
+
+div.botonesSecundarios button{
+    width: 13rem;
+    height: 3rem;
+    border-radius: 10px;
+    margin: 10px 5px;
+    border: 1px solid #0a3871;
+}
+
+div.botonesSecundarios{
+    display: flex;
+    justify-content: center;
+}
+
+div.botonesSecundarios button{
+    width: 13rem;
+    height: 3rem;
+    border-radius: 10px;
+    margin: 10px 5px;
+    border: 1px solid #0a3871;
+}
+
+button.btn-copiar{
+    background-color: #0a3871;
+    color: white;
+    cursor: pointer;
+}
+
+button.btn-copiar:hover{
+    background-color: #135ebb;
+    border: 1px solid #135ebb;
+}
+
+button.btn-limpiar{
+    color: #0a3871;
+    background-color: #d8dfe8;
+    cursor: pointer;
+}
+
+button.btn-limpiar:hover{
+    color: white;
+    background-color: #999ca0;
+    border: 1px solid #999ca0;
+    cursor: pointer;
 }

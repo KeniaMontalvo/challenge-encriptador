@@ -190,4 +190,14 @@ button.btn-limpiar:hover{
         width: 20rem;
         height: 18rem;
     }
+
+    div.botonesPrincipales button{
+        width: 9rem;
+        height: 2rem;
+    }
+
+    div.botonesSecundarios button{
+        width: 9rem;
+        height: 2rem;
+    }
 }

@@ -21,6 +21,7 @@ section.ingresarTexto{
 div.textoParaModificar{
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 label.etiquetaIndicacion{
@@ -169,4 +170,24 @@ button.btn-limpiar:hover{
     background-color: #999ca0;
     border: 1px solid #999ca0;
     cursor: pointer;
+}
+
+@media (max-width: 830px){
+    
+    div.cuerpo{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 530px){
+
+    div.textoParaModificar{
+        align-items: center;
+    }
+
+    textarea.inputTextoParaEncriptar{
+        width: 20rem;
+        height: 18rem;
+    }
 }
